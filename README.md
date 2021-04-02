@@ -2,7 +2,7 @@
 Сервис для просмотра спортивной статистики.
 
 
-[Ссылка](https://VladimirovaAnastasia.github.io/SoccerStatisctics) на gh-pages.
+[Ссылка](https://vladimirovaanastasia.github.io/SoccerStatistics) на gh-pages.
 
 В качестве публичного API для получения данных используется
 https://www.football-data.org/.
@@ -15,10 +15,7 @@ https://www.football-data.org/.
 
 
 ### Что сделано: 
-- [x] Реализованы страницы [Список лиг](https://VladimirovaAnastasia.github.io/SoccerStatistics/competitions), 
-[Список команд лиги](https://VladimirovaAnastasia.github.io/SoccerStatistics/competition/ELC),
-[Календарь лиги](https://VladimirovaAnastasia.github.io/SoccerStatistics/competition/ELC/matches), 
-[Календарь команды](https://VladimirovaAnastasia.github.io/http://localhost:3001/SoccerStatistics/competition/ELC/346);
+- [x] Реализованы страницы Список лиг, Список команд лиги, Календарь лиги, Календарь команды;
 - [x] На страницах календаря можно указать фильтр по дате (с, по);
 - [x] На всех страницах можно найти сущность по текстовому поиску;
 - [x] После обновления страницы данные (год, команда, поисковой запрос) сохраняются;
