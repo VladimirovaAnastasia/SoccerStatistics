@@ -15,10 +15,10 @@ https://www.football-data.org/.
 
 
 ### Что сделано: 
-- [x] Реализованы страницы [Список лиг](https://VladimirovaAnastasia.github.io/SoccerStatisctics/competitions), 
-[Список команд лиги](https://VladimirovaAnastasia.github.io/SoccerStatisctics/competition/ELC),
-[Календарь лиги](https://VladimirovaAnastasia.github.io/SoccerStatisctics/competition/ELC/matches), 
-[Календарь команды](https://VladimirovaAnastasia.github.io/http://localhost:3001/SoccerStatisctics/competition/ELC/346);
+- [x] Реализованы страницы [Список лиг](https://VladimirovaAnastasia.github.io/SoccerStatistics/competitions), 
+[Список команд лиги](https://VladimirovaAnastasia.github.io/SoccerStatistics/competition/ELC),
+[Календарь лиги](https://VladimirovaAnastasia.github.io/SoccerStatistics/competition/ELC/matches), 
+[Календарь команды](https://VladimirovaAnastasia.github.io/http://localhost:3001/SoccerStatistics/competition/ELC/346);
 - [x] На страницах календаря можно указать фильтр по дате (с, по);
 - [x] На всех страницах можно найти сущность по текстовому поиску;
 - [x] После обновления страницы данные (год, команда, поисковой запрос) сохраняются;
