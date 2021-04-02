@@ -51,10 +51,10 @@ const Competitions = () => {
                             <th className="col-1" scope="col">
                                 #
                             </th>
-                            <th className="col-1" scope="col">
+                            <th className="col-2" scope="col">
                                 {' '}
                             </th>
-                            <th className="col-10" scope="col">
+                            <th className="col-9" scope="col">
                                 Competition
                             </th>
                         </tr>

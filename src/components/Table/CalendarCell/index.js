@@ -10,9 +10,9 @@ const CalendarCell = ({data}) => {
             <td className="col-6">
                 {data.awayTeam.name} - {data.homeTeam.name}
             </td>
-            <td className="col-4">{date}</td>
+            <td className="col-3">{date}</td>
             {data.score.fullTime.awayTeam != null ? (
-                <td className="col-1">
+                <td className="col-2">
                     {data.score.fullTime.awayTeam} : {data.score.fullTime.homeTeam}
                 </td>
             ) : (

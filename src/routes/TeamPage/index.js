@@ -6,6 +6,7 @@ import Loader from '../../components/Loader';
 import FilteredTeam from './FilteredTeam';
 import ErrorWrapper from '../../layout/ErrorWrapper';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
+import CalendarHeader from '../../components/Table/CalendarHeader';
 
 import {getTeamCalendarAsync} from '../../store/teamCalendar';
 import {isTeamCalendarLoading, teamCalendar, teamCalendarError} from '../../store/teamCalendar';
@@ -15,10 +16,7 @@ import {format} from 'date-fns';
 const Team = ({teamInfo}) => {
     const location = useLocation();
     const history = useHistory();
-    const [range, setRange] = useState([
-        new URLSearchParams(location.search).get('dateFrom') || new Date(2020, 12, 1),
-        new URLSearchParams(location.search).get('dateTo') || new Date(),
-    ]);
+    const [range, setRange] = useState([new Date(2020, 12, 1), new Date()]);
 
     const dispatch = useDispatch();
     let team = useSelector(teamCalendar);
@@ -75,22 +73,7 @@ const Team = ({teamInfo}) => {
                 <Loader />
             ) : (
                 <table className="table table-hover">
-                    <thead>
-                        <tr className="d-flex">
-                            <th className="col-1" scope="col">
-                                #
-                            </th>
-                            <th className="col-6" scope="col">
-                                Clubs
-                            </th>
-                            <th className="col-4" scope="col">
-                                Date
-                            </th>
-                            <th className="col-1" scope="col">
-                                Result
-                            </th>
-                        </tr>
-                    </thead>
+                    <CalendarHeader />
                     <tbody>
                         <FilteredTeam team={team} startDate={range[0]} endDate={range[1]} />
                     </tbody>

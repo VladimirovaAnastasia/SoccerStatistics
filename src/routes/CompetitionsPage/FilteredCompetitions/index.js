@@ -12,6 +12,8 @@ const FilteredCompetitions = ({competitions, search}) => {
                     return item.name.toLowerCase().includes(search);
                 })
             );
+        } else {
+            setFilteredCompetitions(competitions);
         }
     }, [search]);
 

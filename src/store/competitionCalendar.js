@@ -48,8 +48,8 @@ export const getCompetitionCalendarAsync = (name, query = null) => async (dispat
     try {
         dispatch(fetchCompetitionCalendar());
 
-        const CompetitionCalendarResponse = await api.getCompetitionMatches(name, query);
-        const competitionCalendar = CompetitionCalendarResponse.data.matches;
+        const competitionCalendarResponse = await api.getCompetitionMatches(name, query);
+        const competitionCalendar = competitionCalendarResponse.data.matches;
 
         dispatch(fetchCompetitionCalendarResolve(competitionCalendar));
     } catch (error) {

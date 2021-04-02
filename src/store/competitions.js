@@ -68,11 +68,11 @@ export const getAreasAsync = () => async (dispatch) => {
 export const getCompetitionsAsync = () => async (dispatch) => {
     try {
         dispatch(fetchCompetitions());
-        const AreasResponse = await api.getAreas();
-        const areas = AreasResponse.data.areas.filter((item) => item.parentArea === 'Europe');
+        const areasResponse = await api.getAreas();
+        const areas = areasResponse.data.areas.filter((item) => item.parentArea === 'Europe');
 
-        const CompetitionsResponse = await api.getCompetitions();
-        const competitions = CompetitionsResponse.data.competitions.filter((competition) => {
+        const competitionsResponse = await api.getCompetitions();
+        const competitions = competitionsResponse.data.competitions.filter((competition) => {
             const isEurope = areas.filter((area) => area.name === competition.area.name);
             return isEurope.length && competition.code && competition.plan === 'TIER_ONE';
         });

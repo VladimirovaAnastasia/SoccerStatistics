@@ -44,8 +44,8 @@ export const getTeamsAsync = (name, year) => async (dispatch) => {
     try {
         dispatch(fetchTeams());
 
-        const TeamsResponse = await api.getCompetitionTeams(name, year);
-        const teams = TeamsResponse.data.standings.find((item) => item.type === 'TOTAL').table;
+        const teamsResponse = await api.getCompetitionTeams(name, year);
+        const teams = teamsResponse.data.standings.find((item) => item.type === 'TOTAL').table;
 
         dispatch(fetchTeamsResolve(teams));
     } catch (error) {

@@ -6,6 +6,7 @@ import Loader from '../../components/Loader';
 import FilteredCompetition from './FilteredCompetition';
 import DateRangePicker from 'react-bootstrap-daterangepicker';
 import ErrorWrapper from '../../layout/ErrorWrapper';
+import CalendarHeader from '../../components/Table/CalendarHeader';
 
 import {
     isCompetitionCalendarLoading,
@@ -18,10 +19,7 @@ import {format} from 'date-fns';
 
 const Team = ({name}) => {
     const history = useHistory();
-    const [range, setRange] = useState([
-        new URLSearchParams(location.search).get('dateFrom') || new Date(2020, 12, 1),
-        new URLSearchParams(location.search).get('dateTo') || new Date(),
-    ]);
+    const [range, setRange] = useState([new Date(2020, 12, 1), new Date()]);
 
     const dispatch = useDispatch();
     let competition = useSelector(competitionCalendar);
@@ -78,22 +76,7 @@ const Team = ({name}) => {
                 <Loader />
             ) : (
                 <table className="table table-hover">
-                    <thead>
-                        <tr className="d-flex">
-                            <th className="col-1" scope="col">
-                                #
-                            </th>
-                            <th className="col-6" scope="col">
-                                Clubs
-                            </th>
-                            <th className="col-4" scope="col">
-                                Date
-                            </th>
-                            <th className="col-1" scope="col">
-                                Result
-                            </th>
-                        </tr>
-                    </thead>
+                    <CalendarHeader />
                     <tbody>
                         <FilteredCompetition competition={competition} startDate={range[0]} endDate={range[1]} />
                     </tbody>

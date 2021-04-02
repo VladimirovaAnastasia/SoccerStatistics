@@ -44,10 +44,10 @@ export const getTeamCalendarAsync = (name, teamId, query) => async (dispatch) =>
     try {
         dispatch(fetchTeamCalendar());
 
-        const TeamCalendarResponse = await api.getTeamMatches(name, query);
-        const teamCalendar = TeamCalendarResponse.data.matches.filter(
-            (item) => item.awayTeam.id == teamId || item.homeTeam.id == teamId
-        );
+        const teamCalendarResponse = await api.getTeamMatches(name, query);
+        const teamCalendar = teamCalendarResponse.data.matches.filter((item) => {
+            return String(item.awayTeam.id) === teamId || String(item.homeTeam.id) === teamId;
+        });
 
         dispatch(fetchTeamCalendarResolve(teamCalendar));
     } catch (error) {

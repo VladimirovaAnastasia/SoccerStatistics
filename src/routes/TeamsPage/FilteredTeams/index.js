@@ -2,7 +2,7 @@ import React, {Fragment, useEffect, useState} from 'react';
 
 import TeamCell from '../../../components/Table/TeamCell/TeamCell';
 
-const FilteredTeams = ({teams, name, search, year}) => {
+const FilteredTeams = ({teams, name, search}) => {
     let [filteredTeams, setFilteredTeams] = useState(teams);
 
     useEffect(() => {
@@ -12,8 +12,10 @@ const FilteredTeams = ({teams, name, search, year}) => {
                     return item.team.name.toLowerCase().includes(search);
                 })
             );
+        } else {
+            setFilteredTeams(teams);
         }
-    }, [search, year]);
+    }, [search]);
 
     return (
         <Fragment>

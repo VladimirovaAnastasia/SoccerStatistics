@@ -9,10 +9,10 @@ const CompetitionCell = ({data, history}) => {
     return (
         <tr className="d-flex" onClick={getItem}>
             <th className="col-1">{data.index + 1}</th>
-            <td className="col-1">
+            <td className="col-2">
                 {data.area.ensignUrl && <img style={{width: 36}} src={`${data.area.ensignUrl}`} alt={'flag'} />}
             </td>
-            <td className="col-10">{data.name}</td>
+            <td className="col-9">{data.name}</td>
         </tr>
     );
 };
