@@ -2,7 +2,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const baseURL = 'http://api.football-data.org/v2/';
+const baseURL = 'https://api.football-data.org/v2/';
 const API_KEY = process.env.REACT_APP_API_KEY;
 const config = {
     headers: {'X-Auth-Token': API_KEY},
